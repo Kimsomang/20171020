@@ -69,6 +69,7 @@ public class FactoryDao {
 	
 	/** DBMS 연결 객체 반환 */
 	public Connection getConnection() throws SQLException {
+		System.out.println("Connect!!");
 		return DriverManager.getConnection(url, username, password);
 	}
 	

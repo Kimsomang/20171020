@@ -10,13 +10,12 @@
 		<context:exclude-filter type="assignable" expression="notice.model.TestClass"/>
 		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Repository"/>
 		<context:exclude-filter type="regex" expression=".*Controller"/>
-		<context:exclude-filter type="aspectj" expression="notice.model..*Dao*"/>
-		<context:exclude-filter type="aspectj" expression="notice.model..*.set*(..)"/>
+		<context:exclude-filter type="aspectj" expression="*notice.model.*Dao"/>
 		-->
 	</context:component-scan>
 	
 	<bean id="dbserver" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
-	<property name="location" value="dbserver.properties"/>
+		<property name="location" value="dbserver.properties"/>
 	</bean>
 
 	<!-- 

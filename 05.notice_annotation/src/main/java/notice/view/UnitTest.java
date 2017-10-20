@@ -20,6 +20,7 @@ public class UnitTest {
 		
 		FactoryDao factory = context.getBean("factoryDao", FactoryDao.class);
 		System.out.println(factory);
+		System.out.println(factory.getConnection());
 
 		System.out.println();
 		System.out.println(context.getBean("loginDao", LoginDao.class));
